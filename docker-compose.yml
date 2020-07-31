@@ -1,0 +1,15 @@
+version: '3'
+services:
+  ansible:
+    container_name: ${CONTAINER_NAME}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - ${CODE_PATH}:/root/code:delegated
+      - ${SSH_PATH}:/root/.ssh:ro,delegated
+      - ${SCRIPT_PATH}:/usr/local/sbin:delegated
+    ports:
+       - "${SSH_PORT}:22"
+
