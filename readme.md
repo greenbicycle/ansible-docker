@@ -5,4 +5,5 @@
 
 https://wiki.alpinelinux.org/wiki/Ansible
 
-
+* Put ansible-related stuff in code/
+* Put related bash scripts in bin/
